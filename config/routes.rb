@@ -1,6 +1,20 @@
 JobCrm::Application.routes.draw do
-  resources :jobs
+  
+  root :to => 'static_pages#dashboard'
 
+  get "static_pages/home"
+
+  get "static_pages/about"
+
+  get "static_pages/contact"
+
+  get "static_pages/sign_in"
+
+  get "static_pages/sign_up"
+
+  get "static_pages/dashboard"
+
+  resources :jobs
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

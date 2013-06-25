@@ -188,23 +188,35 @@ li.repo h3 {
 }
 
 .repo.other:after {
-  border-right-color: #333;
+  border-right-color: #333; 
+}
+
+/*.repo.info:after{
+  border-right-color: ;
+}
+
+.repo.info:after{
+  border-right-color: pink;
+}
+*/
+.repo.info:after{
+  border-right-color: pink;
 }
 
 .repo.tech:after {
-  border-right-color: #7ac9de;
+  border-right-color: #7ac9de; 
 }
 
-.repo.sales:after {
-  border-right-color: #cc1100;
+.repo.rails:after {
+  border-right-color: #cc1100; /* red */
 }
 
 .repo.goal:after {
   border-right-color: #cc8300;
 }
 
-.repo.Developer:after {
-  border-right-color: #6aad2d;
+.repo.developer:after {
+  border-right-color: #6aad2d; /*green*/
 }
 
 @keyframes small-swing { 0% { margin-top: 0px } 50% { margin-top: -10px } 100% { margin-top: 0px } }
