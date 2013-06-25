@@ -1,0 +1,80 @@
+<%= form_for(@job) do |f| %>
+  <% if @job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% @job.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :contact %><br />
+    <%= f.text_field :contact %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <!-- <div class="field"> <br />
+      <label for="job_percent">25 </label>
+      <input id="job_percent" name="job[percent]" type="radio" value="25" /><br>
+      <label for="job_percent">50 </label>
+      <input id="job_percent" name="job[percent]" type="radio" value="50" /><br>
+      <label for="job_percent">75 </label>
+      <input id="job_percent" name="job[percent]" type="radio" value="75" /><br>
+      <label for="job_percent">100</label>
+      <input id="job_percent" name="job[percent]" type="radio" value="100" /><br>
+  </div> -->
+
+  <div class="field">
+    <p></p>
+    <select id="job_percent" name="job[percent]" type="radio">
+      <option value="0">Percentage Done</option>
+      <option value="1">0</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+      <option value="75">75</option>
+      <option value="100">Done!</option>
+    </select>
+  </div>
+  
+  <div class="field">
+     <p></p>
+    <select id="job_job_type" name="job[job_type]" type="select">
+      <option value="Developer">Developer?</option>
+      <option value="sales">sales?</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+      <option value="75">75</option>
+      <option value="100">Done!</option>
+    </select>
+
+  </div>
+  <div class="field">
+    <%= f.label :company %><br />
+    <%= f.text_field :company %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :email_text %><br />
+    <%= f.text_area :email_text %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,26 @@
+
+<% @jobs.each do |job| %>
+    <li class="repo grid-1 <%= job.job_type %>"> <small><%= job.percent %>%</small>
+     <p><%= job.title %> </p>
+     <p><%= job.contact %> </p>
+     <p><%= job.phone %> </p>
+     <p><%= job.email %> </p>
+     <!-- <p><%= job.notes %> </p> -->
+     <!-- <p><%= job.percent %> </p> -->
+     <p><%= job.job_type %> </p>
+     <p><%= job.company %> </p>
+     <!-- <p><%= job.email_text %> </p> -->
+     <div class="meter_container">
+        <div class="meter">
+            <span style="width: <%= job.percent %>%"></span>
+        </div>
+        <span class="opt">
+    
+     <%= link_to 'Show', job %> 
+     <%= link_to 'Edit', edit_job_path(job) %> 
+     <%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %> 
+          
+        </span>
+    </div>
+</li> 
+<% end %>

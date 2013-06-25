@@ -1,0 +1,35 @@
+<link href="/css/custom.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/css/progress.css" media="all" rel="stylesheet" type="text/css" />
+
+<h1>Listing Jobs</h1>
+
+<div class="grid clearfix" id="wrapper">
+
+    <div id="main" class="grid-1">
+        <div id="logo"><h1>Twitter Open Source</h1></div>
+            <h1>JOBS</h1>
+            <p>Go get 'em</p>
+            <%= link_to 'New Job', new_job_path %>
+            
+    </div>
+    <div class="grid grid-3">
+        <div id="statistics1" class="grid-1 alpha header"></div>
+        <div class="grid-2 omega header">Something should go here.</div>
+    </div>
+
+
+
+    <ol class="repos">
+
+        <%= render 'card' %>
+
+    </ol>
+</div>
+
+    <br />
+
+    
+
+
+</div>
+
